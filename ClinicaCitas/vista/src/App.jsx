@@ -8,12 +8,13 @@ import Citas from "./pages/Citas";
 function App() {
     return (
         <BrowserRouter>
-            <nav style={{ background: "#2c3e50", padding: "1rem", display: "flex", gap: "1rem" }}>
-                <Link style={{ color: "white", textDecoration: "none" }} to="/">🏥 Inicio</Link>
-                <Link style={{ color: "white", textDecoration: "none" }} to="/pacientes">👤 Pacientes</Link>
-                <Link style={{ color: "white", textDecoration: "none" }} to="/doctores">👨‍⚕️ Doctores</Link>
-                <Link style={{ color: "white", textDecoration: "none" }} to="/agendar">📅 Agendar Cita</Link>
-                <Link style={{ color: "white", textDecoration: "none" }} to="/citas">📋 Citas</Link>
+            <nav style={{ background: "#1a73e8", padding: "1rem 2rem", display: "flex", gap: "2rem", alignItems: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.2)" }}>
+                <span style={{ color: "white", fontWeight: "bold", fontSize: "1.2rem" }}>🏥 ClinicaCitas</span>
+                <Link style={{ color: "white", textDecoration: "none", fontWeight: "500" }} to="/">Inicio</Link>
+                <Link style={{ color: "white", textDecoration: "none", fontWeight: "500" }} to="/pacientes">Pacientes</Link>
+                <Link style={{ color: "white", textDecoration: "none", fontWeight: "500" }} to="/doctores">Doctores</Link>
+                <Link style={{ color: "white", textDecoration: "none", fontWeight: "500" }} to="/agendar">Agendar Cita</Link>
+                <Link style={{ color: "white", textDecoration: "none", fontWeight: "500" }} to="/citas">Citas</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Inicio />} />
