@@ -13,6 +13,10 @@ function Pacientes() {
     useEffect(() => { cargar(); }, []);
 
     const guardar = () => {
+        if (!form.nombre || !form.telefono || !form.email || !form.fechaNacimiento) {
+            alert("Por favor completa todos los campos.");
+            return;
+        }
         fetch("https://localhost:7294/api/Pacientes", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
