@@ -13,6 +13,10 @@ function Doctores() {
     useEffect(() => { cargar(); }, []);
 
     const guardar = () => {
+        if (!form.nombre || !form.especialidad || !form.horario) {
+            alert("Por favor completa todos los campos.");
+            return;
+        }
         fetch("https://localhost:7294/api/Doctores", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
